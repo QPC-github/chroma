@@ -1,3 +1,8 @@
+## master
+
+* Add base error class (`Chroma::Error`).
+* Change namespace for errors from `Chroma::Errors::` to `Chroma::`.
+
 ## v0.1.0 - 2016-05-26
 
 ### Dynamic Custom Palettes

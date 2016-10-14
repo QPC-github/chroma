@@ -64,7 +64,7 @@ module Chroma
         end
 
         if match.nil?
-          raise Errors::UnrecognizedColor, "Unrecognized color `#{color}'"
+          raise UnrecognizedColor, "Unrecognized color `#{color}'"
         end
 
         build_generator(match[1..-1], hash[:class_name], hash[:builder], format)

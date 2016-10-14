@@ -1,6 +1,5 @@
 module Chroma
-  module Errors
-    class PaletteDefinedError < StandardError; end
-    class UnrecognizedColor < StandardError; end
-  end
+  class Error < StandardError; end
+  class PaletteDefinedError < Error; end
+  class UnrecognizedColor < Error; end
 end
