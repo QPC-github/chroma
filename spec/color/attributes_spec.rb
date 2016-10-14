@@ -31,7 +31,7 @@ describe Chroma::Color do
   describe '#alpha' do
     it 'returns the correct alpha value' do
       expect('rgba(255, 0, 0, 0.75)'.paint.alpha).to eq 0.75
-      expect('#80ff0000'.paint.alpha).to             be_within(0.01).of(0.5)
+      expect('#ff000080'.paint.alpha).to             be_within(0.01).of(0.5)
       expect('transparent'.paint.alpha).to           eq 0
       expect('hsla(0, 100%, 50%, 0'.paint.alpha).to  eq 0
       expect(red.alpha).to                           eq 1

@@ -36,8 +36,8 @@ describe Chroma::Color do
 
     describe '#to_hex8' do
       it 'returns the hex8 string' do
-        expect(green.to_hex8).to eq('#ff008000')
-        expect(blue.to_hex8).to  eq('#800000ff')
+        expect(green.to_hex8).to eq('#008000ff')
+        expect(blue.to_hex8).to  eq('#0000ff80')
       end
     end
 

@@ -23,7 +23,7 @@ describe Chroma do
     end
 
     context 'with 8 character hexadecimal' do
-      let(:hex) { '#80ff0000' }
+      let(:hex) { '#ff000080' }
 
       it 'creates a color' do
         expect(Chroma.paint(hex)).to be_a(Chroma::Color)

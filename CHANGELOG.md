@@ -1,5 +1,6 @@
 ## master
 
+* Fix hex8 / #RGBA parsing and serialization.
 * Add base error class (`Chroma::Error`).
 * Change namespace for errors from `Chroma::Errors::` to `Chroma::`.
 
