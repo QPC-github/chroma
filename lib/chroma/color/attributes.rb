@@ -49,6 +49,18 @@ module Chroma
         @rgb.b
       end
 
+      def hue
+        Chroma::Converters::HslConverter.convert_rgb(@rgb).h
+      end
+
+      def saturation
+        Chroma::Converters::HslConverter.convert_rgb(@rgb).s
+      end
+
+      def lightness
+        Chroma::Converters::HslConverter.convert_rgb(@rgb).l
+      end
+
       # Calculates the brightness.
       #
       # @example
