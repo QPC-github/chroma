@@ -68,6 +68,36 @@ describe Chroma::Color do
     end
   end
 
+  describe '#hue' do
+    it 'returns the correct hue value' do
+      expect('rgba(255, 0, 75, 0.75)'.paint.hue).to eq 342.3529411764706
+      expect('#ff00cc80'.paint.hue).to              eq 312.0
+      expect('transparent'.paint.hue).to            eq 0
+      expect('hsla(266, 100%, 25%, 0'.paint.hue).to eq 266.0
+      expect(red.hue).to                            eq 0
+    end
+  end
+
+  describe '#saturation' do
+    it 'returns the correct saturation value' do
+      expect('rgba(212, 26, 75, 0.75)'.paint.saturation).to eq 0.7815126050420169
+      expect('#ff00cc80'.paint.saturation).to               eq 1.0
+      expect('transparent'.paint.saturation).to             eq 0
+      expect('hsla(266, 95%, 25%, 0'.paint.saturation).to   eq 0.95
+      expect(black.saturation).to                           eq 0
+    end
+  end
+
+  describe '#lightness' do
+    it 'returns the correct lightness value' do
+      expect('rgba(187, 30, 75, 0.75)'.paint.lightness).to eq 0.42549019607843136
+      expect('#ff00cc80'.paint.lightness).to               eq 0.5
+      expect('transparent'.paint.lightness).to             eq 0
+      expect('hsla(266, 100%, 25%, 0'.paint.lightness).to  eq 0.25
+      expect(black.lightness).to                           eq 0
+    end
+  end
+
   describe '#brightness' do
     it 'returns the correct brightness' do
       expect(red.brightness).to    eq 76.245
