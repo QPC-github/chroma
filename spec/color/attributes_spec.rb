@@ -80,20 +80,20 @@ describe Chroma::Color do
 
   describe '#saturation' do
     it 'returns the correct saturation value' do
-      expect('rgba(212, 26, 75, 0.75)'.paint.saturation).to eq 0.7815126050420169
-      expect('#ff00cc80'.paint.saturation).to               eq 1.0
+      expect('rgba(212, 26, 75, 0.75)'.paint.saturation).to eq 78
+      expect('#ff00cc80'.paint.saturation).to               eq 100
       expect('transparent'.paint.saturation).to             eq 0
-      expect('hsla(266, 95%, 25%, 0'.paint.saturation).to   eq 0.95
+      expect('hsla(266, 95%, 25%, 0'.paint.saturation).to   eq 95
       expect(black.saturation).to                           eq 0
     end
   end
 
   describe '#lightness' do
     it 'returns the correct lightness value' do
-      expect('rgba(187, 30, 75, 0.75)'.paint.lightness).to eq 0.42549019607843136
-      expect('#ff00cc80'.paint.lightness).to               eq 0.5
+      expect('rgba(187, 30, 75, 0.75)'.paint.lightness).to eq 43
+      expect('#ff00cc80'.paint.lightness).to               eq 50
       expect('transparent'.paint.lightness).to             eq 0
-      expect('hsla(266, 100%, 25%, 0'.paint.lightness).to  eq 0.25
+      expect('hsla(266, 100%, 25%, 0'.paint.lightness).to  eq 25
       expect(black.lightness).to                           eq 0
     end
   end

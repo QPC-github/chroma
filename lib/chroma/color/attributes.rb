@@ -54,11 +54,11 @@ module Chroma
       end
 
       def saturation
-        Chroma::Converters::HslConverter.convert_rgb(@rgb).s
+        (Chroma::Converters::HslConverter.convert_rgb(@rgb).s * 100).round
       end
 
       def lightness
-        Chroma::Converters::HslConverter.convert_rgb(@rgb).l
+        (Chroma::Converters::HslConverter.convert_rgb(@rgb).l * 100).round
       end
 
       # Calculates the brightness.
