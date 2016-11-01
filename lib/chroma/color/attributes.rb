@@ -37,6 +37,18 @@ module Chroma
         @rgb.a
       end
 
+      def red
+        @rgb.r
+      end
+
+      def green
+        @rgb.g
+      end
+
+      def blue
+        @rgb.b
+      end
+
       # Calculates the brightness.
       #
       # @example

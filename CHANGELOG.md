@@ -3,6 +3,7 @@
 * Fix hex8 / #RGBA parsing and serialization.
 * Add base error class (`Chroma::Error`).
 * Change namespace for errors from `Chroma::Errors::` to `Chroma::`.
+* Add red, green and blue color attributes
 
 ## v0.1.0 - 2016-05-26
 

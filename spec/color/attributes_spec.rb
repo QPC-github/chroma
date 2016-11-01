@@ -38,6 +38,36 @@ describe Chroma::Color do
     end
   end
 
+  describe '#red' do
+    it 'returns the correct red value' do
+      expect('rgba(255, 0, 0, 0.75)'.paint.red).to eq 255
+      expect('#ff000080'.paint.red).to             eq 255
+      expect('transparent'.paint.red).to           eq 0
+      expect('hsla(0, 100%, 50%, 0'.paint.red).to  eq 255.0
+      expect(red.red).to                           eq 255
+    end
+  end
+
+  describe '#green' do
+    it 'returns the correct green value' do
+      expect('rgba(255, 128, 0, 0.75)'.paint.green).to eq 128
+      expect('#ffaa0080'.paint.green).to               eq 170
+      expect('transparent'.paint.green).to             eq 0
+      expect('hsla(168, 100%, 50%, 0'.paint.green).to  eq 255.0
+      expect(yellow.green).to                          eq 255
+    end
+  end
+
+  describe '#blue' do
+    it 'returns the correct blue value' do
+      expect('rgba(255, 0, 75, 0.75)'.paint.blue).to eq 75
+      expect('#ff00cc80'.paint.blue).to              eq 204
+      expect('transparent'.paint.blue).to            eq 0
+      expect('hsla(266, 100%, 25%, 0'.paint.blue).to eq 127.5
+      expect(black.blue).to                          eq 0
+    end
+  end
+
   describe '#brightness' do
     it 'returns the correct brightness' do
       expect(red.brightness).to    eq 76.245
